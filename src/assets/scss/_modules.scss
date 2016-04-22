@@ -1,0 +1,43 @@
+
+.Navigation {
+  padding-top: $grid-column-gutter * 2;
+
+  // @include breakpoint(large) {
+  //   padding-top: $grid-column-gutter * 2;
+  // }
+
+  &Logo {
+    background-image: url('../img/z.png');
+    background-repeat: no-repeat;
+    background-size: 48px;
+    display: block;
+    height: 100px;
+    width: 72px;
+    list-style: none;
+    margin-left: 0;
+    opacity: .8;
+    padding-bottom: $grid-column-gutter;
+    text-indent: -9999px;
+    transition: opacity .25s linear;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &List {
+    border-bottom: 1px solid rgba($light-gray, .25);
+    margin-bottom: $grid-column-gutter;
+    padding-bottom: $grid-column-gutter;
+    list-style: none;
+
+    a {
+      color: $medium-gray;
+      transition: color .25s linear;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}

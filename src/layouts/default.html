@@ -4,31 +4,37 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zach Frank - Devsigner</title>
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }}</title>
     <link rel="stylesheet" href="{{root}}assets/css/styles.css">
   </head>
   <body>
     <div class="Page">
       <div class="Sidebar">
-        <h1>Zach Frank</h1>
         <nav class="Navigation" role="navigation">
-          <ul>
-            <li><a href="{{root}}">Work</a></li>
-            <li><a href="{{root}}about.html">About</a></li>
-            <li><a href="{{root}}contact.html">Contact</a></li>
+          <ul class="NavigationList">
+            <li class="NavigationListItem"><a href="/" class="NavigationLogo"><h1>Zach Frank</h1></a></li>
+            <li class="NavigationListItem"><a href="/">Work</a></li>
+            <li class="NavigationListItem"><a href="{{root}}about.html">About</a></li>
+            <li class="NavigationListItem"><a href="{{root}}contact.html">Contact</a></li>
+          </ul>
+          <ul class="NavigationList">
+            <li class="NavigationListItem"><a href="{{root}}work/mysidewalk.html">mySidewalk</a></li>
           </ul>
         </nav>
       </div>
       <div class="ContentContainer">
         <main class="Content" role="main">
-          {{> body}}
+          <article>
+            {{> body}}
+          </article>
         </main>
         <footer class="Footer" role="contentinfo">
           <p>Footer</p>
         </footer>
       </div>
     </div>
-    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <!-- <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script> -->
     <script src="{{root}}assets/js/zfrankdesign.js"></script>
   </body>
 </html>

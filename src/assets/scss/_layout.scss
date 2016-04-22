@@ -1,4 +1,6 @@
 
+$sidebar-width: 250px;
+
 body,
 html {
   height: 100%;
@@ -6,16 +8,22 @@ html {
 }
 
 .Page {
-  @include flex-grid-row(null, 100%, null, true);
   height: 100%;
 }
 
 .Sidebar {
-  @include flex-grid-column(3);
+  @include grid-row();
+  @include breakpoint(large) {
+    height: 100%;
+    position: fixed;
+    width: $sidebar-width;
+  }
 }
 
 .ContentContainer {
-  @include flex-grid-column();
+  @include breakpoint(large) {
+    margin-left: $sidebar-width;
+  }
 
   .Content,
   .Footer {
