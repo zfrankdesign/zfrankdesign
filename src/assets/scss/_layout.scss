@@ -1,0 +1,25 @@
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.Page {
+  @include flex-grid-row(null, 100%, null, true);
+  height: 100%;
+}
+
+.Sidebar {
+  @include flex-grid-column(3);
+  @include flex-grid-column-align(stretch);
+}
+
+.ContentContainer {
+  @include flex-grid-column();
+
+  .Content,
+  .Footer {
+    @include grid-row();
+  }
+}
