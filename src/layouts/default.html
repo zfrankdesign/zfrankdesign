@@ -8,7 +8,26 @@
     <link rel="stylesheet" href="{{root}}assets/css/styles.css">
   </head>
   <body>
-    {{> body}}
+    <div class="Page">
+      <div class="Sidebar">
+        <h1>Zach Frank</h1>
+        <nav class="Navigation" role="navigation">
+          <ul>
+            <li><a href="{{root}}">Work</a></li>
+            <li><a href="{{root}}about.html">About</a></li>
+            <li><a href="{{root}}contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="ContentContainer">
+        <main class="Content" role="main">
+          {{> body}}
+        </main>
+        <footer class="Footer" role="contentinfo">
+          <p>Footer</p>
+        </footer>
+      </div>
+    </div>
     <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
     <script src="{{root}}assets/js/zfrankdesign.js"></script>
   </body>

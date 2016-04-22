@@ -12,7 +12,6 @@ html {
 
 .Sidebar {
   @include flex-grid-column(3);
-  @include flex-grid-column-align(stretch);
 }
 
 .ContentContainer {
