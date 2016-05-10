@@ -13,20 +13,36 @@ html {
 
 .Sidebar {
   @include grid-row();
+  padding-top: $grid-column-gutter * 2;
+
   @include breakpoint(large) {
     height: 100%;
+    padding-top: $grid-column-gutter * 4;
+    padding-left: $grid-column-gutter;
     position: fixed;
     width: $sidebar-width;
   }
 }
 
 .ContentContainer {
+
   @include breakpoint(large) {
     margin-left: $sidebar-width;
+    padding-top: $grid-column-gutter * 4;
   }
 
   .Content,
   .Footer {
     @include grid-row();
+  }
+
+  .Footer {
+    padding-top: $grid-column-gutter;
+    padding-bottom: $grid-column-gutter;
+
+    @include breakpoint(large) {
+      padding-top: $grid-column-gutter * 4;
+      padding-bottom: $grid-column-gutter * 4;
+    }
   }
 }

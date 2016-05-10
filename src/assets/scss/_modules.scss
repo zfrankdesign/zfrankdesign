@@ -1,11 +1,5 @@
 
 .Navigation {
-  padding-top: $grid-column-gutter * 2;
-
-  // @include breakpoint(large) {
-  //   padding-top: $grid-column-gutter * 2;
-  // }
-
   &Logo {
     background-image: url('../img/z.png');
     background-repeat: no-repeat;
@@ -26,7 +20,7 @@
   }
 
   &List {
-    border-bottom: 1px solid rgba($light-gray, .25);
+    // border-bottom: 1px solid rgba($light-gray, .25);
     margin-bottom: $grid-column-gutter;
     padding-bottom: $grid-column-gutter;
     list-style: none;
@@ -40,4 +34,41 @@
       }
     }
   }
+}
+
+.PortfolioItem {
+  position: relative;
+
+  &Details {
+    background-color: $secondary-color;
+    color: $white;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    transition: 250ms opacity;
+
+    &:hover {
+      opacity: 0.95;
+    }
+  }
+}
+
+.ContentTable {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.ContentCell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.Footer {
+  color: $medium-gray;
 }

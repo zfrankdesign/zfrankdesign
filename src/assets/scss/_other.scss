@@ -1,0 +1,10 @@
+
+::-moz-selection { /* Code for Firefox */
+    color: $white;
+    background: $secondary-color;
+}
+
+::selection {
+    color: $white;
+    background: $secondary-color;
+}
