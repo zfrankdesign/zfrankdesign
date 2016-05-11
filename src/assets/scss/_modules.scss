@@ -132,6 +132,8 @@ ul {
 // Portfolio List
 // ---------------
 .PortfolioList {
+  padding-top: $grid-column-gutter;
+
   @include breakpoint(medium) {
     padding-top: $grid-column-gutter * 2;
   }
@@ -141,21 +143,29 @@ ul {
   position: relative;
 
   &Details {
-    background-color: $secondary-color;
+    background-color: rgba($secondary-color, 0.95);
     color: $white;
     cursor: pointer;
     padding: $grid-column-gutter;
     position: absolute;
-    top: 0;
-    left: 0;
     bottom: 0;
+    left: 0;
     right: 0;
-    opacity: 0;
-    text-align: center;
-    transition: 250ms opacity;
 
-    &:hover {
-      opacity: 0.95;
+    @include breakpoint(large) {
+      background-color: $secondary-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      text-align: center;
+      transition: 250ms opacity;
+
+      &:hover {
+        opacity: 0.95;
+      }
     }
   }
 }
@@ -179,6 +189,23 @@ ul {
   @include breakpoint(medium) {
     margin-bottom: $grid-column-gutter * 2;
   }
+}
+
+.WorkDetailHeader {
+  margin-bottom: $grid-column-gutter; 
+}
+
+.work-caption {
+  border-left: 4px solid $primary-color;
+  color: $medium-gray;
+  margin-bottom: $grid-column-gutter * 2;
+  padding-left: $grid-column-gutter;
+}
+
+.work-img {
+  // border: 1px solid $light-gray;
+  margin-bottom: $grid-column-gutter;
+  width: 100%;
 }
 
 // Footer
