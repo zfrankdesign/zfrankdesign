@@ -41,8 +41,8 @@ html {
     padding-bottom: $grid-column-gutter;
 
     @include breakpoint(large) {
-      padding-top: $grid-column-gutter * 4;
-      padding-bottom: $grid-column-gutter * 4;
+      padding-top: $grid-column-gutter * 2;
+      padding-bottom: $grid-column-gutter * 2;
     }
   }
 }

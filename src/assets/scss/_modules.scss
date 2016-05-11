@@ -1,4 +1,58 @@
 
+// Typography
+// ---------------
+
+ul {
+  list-style: circle;
+}
+
+.lead {
+  font-weight: $header-font-weight;
+
+  @include breakpoint(small only) {
+    font-size: rem-calc(map-get(map-get($header-sizes, small), 'h6'));
+  }
+}
+
+.h1 {
+  font-size: rem-calc(map-get(map-get($header-sizes, small), 'h1'));
+  @include breakpoint(medium) {
+    font-size: rem-calc(map-get(map-get($header-sizes, medium), 'h1'));
+  }
+}
+.h2 {
+  font-size: rem-calc(map-get(map-get($header-sizes, small), 'h2'));
+  @include breakpoint(medium) {
+    font-size: rem-calc(map-get(map-get($header-sizes, medium), 'h2'));
+  }
+}
+.h3 {
+  font-size: rem-calc(map-get(map-get($header-sizes, small), 'h3'));
+  @include breakpoint(medium) {
+    font-size: rem-calc(map-get(map-get($header-sizes, medium), 'h3'));
+  }
+}
+.h4 {
+  font-size: rem-calc(map-get(map-get($header-sizes, small), 'h4'));
+  @include breakpoint(medium) {
+    font-size: rem-calc(map-get(map-get($header-sizes, medium), 'h4'));
+  }
+}
+.h5 {
+  font-size: rem-calc(map-get(map-get($header-sizes, small), 'h5'));
+  @include breakpoint(medium) {
+    font-size: rem-calc(map-get(map-get($header-sizes, medium), 'h5'));
+  }
+}
+.h6 {
+  font-size: rem-calc(map-get(map-get($header-sizes, small), 'h6'));
+  @include breakpoint(medium) {
+    font-size: rem-calc(map-get(map-get($header-sizes, medium), 'h6'));
+  }
+}
+
+// Navigation
+// ---------------
 .Navigation {
   &Logo {
     background-image: url('../img/z.png');
@@ -21,18 +75,65 @@
 
   &List {
     // border-bottom: 1px solid rgba($light-gray, .25);
-    margin-bottom: $grid-column-gutter;
-    padding-bottom: $grid-column-gutter;
+    // margin-bottom: $grid-column-gutter;
+    // padding-bottom: $grid-column-gutter;
     list-style: none;
 
     a {
       color: $medium-gray;
       transition: color .25s linear;
 
-      &:hover {
+      &:hover,
+      &.is-active {
         color: $primary-color;
       }
     }
+  }
+}
+
+.ExperienceList,
+.EducationList {
+  list-style: none;
+  margin: 0;
+
+  ul {
+    list-style: circle;
+  }
+}
+
+.ExperienceListItem,
+.EducationListItem {
+  border-bottom: 2px solid rgba($light-gray, 0.2);
+  margin-top: $grid-column-gutter;
+  margin-bottom: $grid-column-gutter;
+  padding-bottom: $grid-column-gutter;
+
+  @include breakpoint(medium) {
+    padding-bottom: $grid-column-gutter * 1.5;
+  }
+
+  .lead em {
+    color: $medium-gray;
+    font-style: normal;
+  }
+}
+
+.InterestsList {
+  @include breakpoint(medium) {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: $grid-column-gutter + 10;
+    -moz-column-gap: $grid-column-gutter + 10;
+    column-gap: $grid-column-gutter + 10;
+  }
+}
+
+// Portfolio List
+// ---------------
+.PortfolioList {
+  @include breakpoint(medium) {
+    padding-top: $grid-column-gutter * 2;
   }
 }
 
@@ -43,6 +144,7 @@
     background-color: $secondary-color;
     color: $white;
     cursor: pointer;
+    padding: $grid-column-gutter;
     position: absolute;
     top: 0;
     left: 0;
@@ -58,6 +160,8 @@
   }
 }
 
+// Content
+// ---------------
 .ContentTable {
   display: table;
   height: 100%;
@@ -69,6 +173,16 @@
   vertical-align: middle;
 }
 
+.ContentSection {
+  margin-bottom: $grid-column-gutter;
+
+  @include breakpoint(medium) {
+    margin-bottom: $grid-column-gutter * 2;
+  }
+}
+
+// Footer
+// ---------------
 .Footer {
   color: $medium-gray;
 }
