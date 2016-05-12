@@ -206,6 +206,10 @@ ul {
   // border: 1px solid $light-gray;
   margin-bottom: $grid-column-gutter;
   width: 100%;
+
+  &.border {
+    border: 1px solid rgba($light-gray, 0.5);
+  }
 }
 
 .pagination-next,
