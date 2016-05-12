@@ -10,8 +10,8 @@
 @include foundation-typography;
 // @include foundation-button;
 // @include foundation-forms;
-// @include foundation-visibility-classes;
-// @include foundation-float-classes;
+@include foundation-visibility-classes;
+@include foundation-float-classes;
 // @include foundation-accordion;
 // @include foundation-badge;
 // @include foundation-breadcrumbs;
@@ -27,7 +27,7 @@
 // @include foundation-menu;
 // @include foundation-off-canvas;
 // @include foundation-orbit;
-// @include foundation-pagination;
+@include foundation-pagination;
 // @include foundation-progress-bar;
 // @include foundation-slider;
 // @include foundation-sticky;
